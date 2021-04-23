@@ -1,0 +1,81 @@
+@import "_colors.scss";
+@import "_fonts.scss";
+@import "_mixins.scss";
+@import "pitch.scss";
+@import "players.scss";
+
+.preload * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+
+@include reset();
+
+* {
+    user-select: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background: #283048; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to left,
+        #859398,
+        #283048
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to left,
+        #859398,
+        #283048
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#dropdown_formation {
+    // display: hidden;
+    width: 20rem;
+    padding: 1.5rem;
+    background: map-get($colors, blue);
+    border-radius: 0.5rem;
+    top: calc(50% - #{$pitch-height} / 2);
+    left: calc(50% + #{$pitch-width} / 2);
+    position: absolute;
+    border: $line-size solid map-get($colors, white);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-left: 1rem;
+
+    form {
+        position: relative;
+        top: 50%;
+    }
+
+    label {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        color: map-get($colors, lightgrey);
+        font-size: 0.8rem;
+    }
+
+    select {
+        display: block;
+        width: 60%;
+        margin: 0 auto;
+        margin-top: 0.25rem;
+        padding: 0.25rem;
+        font-size: 0.8rem;
+        background: lighten(map-get($colors, orange), 10%);
+        border: 1px solid white;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

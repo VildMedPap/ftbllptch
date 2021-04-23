@@ -1,0 +1,74 @@
+.position {
+    $player-size: 3.5rem;
+    z-index: 6;
+
+    transition: all 1000ms ease-in;
+
+    @function pos($pct: 50%) {
+        @return calc(#{$pct} - #{$player-size} / 2);
+    }
+
+    @include make-circular();
+    @include size($player-size);
+    border: 1px dashed map-get($colors, white);
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(map-get($colors, orange), 0.5);
+
+    &#player1 {
+        left: pos(50%);
+        bottom: pos(5%);
+    }
+
+    &#player2 {
+        left: pos(15%);
+        bottom: pos(25%);
+    }
+
+    &#player3 {
+        left: pos(37.5%);
+        bottom: pos(25%);
+    }
+
+    &#player4 {
+        left: pos(62.5%);
+        bottom: pos(25%);
+    }
+
+    &#player5 {
+        left: pos(85%);
+        bottom: pos(25%);
+    }
+
+    &#player6 {
+        left: pos(15%);
+        bottom: pos(50%);
+    }
+
+    &#player7 {
+        left: pos(37.5%);
+        bottom: pos(50%);
+    }
+
+    &#player8 {
+        left: pos(62.5%);
+        bottom: pos(50%);
+    }
+
+    &#player9 {
+        left: pos(85%);
+        bottom: pos(50%);
+    }
+
+    &#player10 {
+        left: pos(33.3%);
+        bottom: pos(80%);
+    }
+
+    &#player11 {
+        left: pos(66.6%);
+        bottom: pos(80%);
+    }
+}
