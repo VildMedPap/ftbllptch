@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            type="image/x-icon"
+            href="img/favicon/favicon.ico"
+        />
+        <title>ftbllptch</title>
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body class="preload">
+        <div id="dropdown_formation">
+            <form action="">
+                <label for="formation">Choose a formation</label>
+                <select id="formation" name="formation">
+                    <option value="f442">4-4-2</option>
+                    <option value="f4411">4-4-1-1</option>
+                    <option value="f442d">4-4-2 (diamond)</option>
+                    <option value="f433">4-3-3</option>
+                    <option value="f451">4-5-1</option>
+                    <option value="f4231">4-2-3-1</option>
+                    <option value="f343">3-4-3</option>
+                    <option value="f352">3-5-2</option>
+                    <option value="f3511">3-5-1-1</option>
+                </select>
+            </form>
+        </div>
+        <div class="pitch">
+            <div class="outline marking"></div>
+            <div class="penalty_area bottom marking"></div>
+            <div class="penalty_arc bottom marking"></div>
+            <div class="goal_area bottom marking"></div>
+            <div class="penalty_area top marking"></div>
+            <div class="penalty_arc top marking"></div>
+            <div class="goal_area top marking"></div>
+            <div class="mark bottom marking"></div>
+            <div class="mark top marking"></div>
+            <div class="mark center marking"></div>
+            <div class="center-line marking"></div>
+            <div class="center-circle marking"></div>
+            <div class="corner right bottom marking"></div>
+            <div class="corner right top marking"></div>
+            <div class="corner left bottom marking"></div>
+            <div class="corner left top marking"></div>
+            <div class="grass"></div>
+            <div class="position" id="player1"></div>
+            <div class="position" id="player2"></div>
+            <div class="position" id="player3"></div>
+            <div class="position" id="player4"></div>
+            <div class="position" id="player5"></div>
+            <div class="position" id="player6"></div>
+            <div class="position" id="player7"></div>
+            <div class="position" id="player8"></div>
+            <div class="position" id="player9"></div>
+            <div class="position" id="player10"></div>
+            <div class="position" id="player11"></div>
+        </div>
+    </body>
+    <script src="js/app.js"></script>
+</html>
